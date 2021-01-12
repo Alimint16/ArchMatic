@@ -23,7 +23,7 @@ PKGS=(
     'bc'                    # Precision calculator language
     'bleachbit'             # File deletion utility
     'curl'                  # Remote content retrieval
-    'elinks'                # Terminal based web browser
+    'lynx'                # Terminal based web browser
     'feh'                   # Terminal-based image viewer/manipulator
     'file-roller'           # Archive utility
     'gnome-keyring'         # System password storage
@@ -48,8 +48,8 @@ PKGS=(
     'xfce4-terminal'        # Terminal emulator
     'zenity'                # Display graphical dialog boxes via shell scripts
     'zip'                   # Zip compression program
-    'zsh'                   # ZSH shell
-    'zsh-completions'       # Tab completion for ZSH
+    'bash'                  # Bash shell
+    'terminator'            # Terminal Emulator
 
     # DISK UTILITIES ------------------------------------------------------
 
@@ -58,7 +58,7 @@ PKGS=(
     'gparted'               # Disk utility
     'gnome-disks'           # Disk utility
     'ntfs-3g'               # Open source implementation of NTFS file system
-    'parted'                # Disk utility
+    'gparted'               # Disk utility
 
     # GENERAL UTILITIES ---------------------------------------------------
 
@@ -72,14 +72,12 @@ PKGS=(
     # DEVELOPMENT ---------------------------------------------------------
 
     'atom'                  # Text editor
-    'apache'                # Apache web server
     'clang'                 # C Lang compiler
     'cmake'                 # Cross-platform open-source make system
     'electron'              # Cross-platform development using Javascript
     'git'                   # Version control system
     'gcc'                   # C/C++ compiler
     'glibc'                 # C libraries
-    'mariadb'               # Drop-in replacement for MySQL
     'meld'                  # File/directory comparison
     'nodejs'                # Javascript runtime environment
     'npm'                   # Node package manager
@@ -93,7 +91,6 @@ PKGS=(
 
     # WEB TOOLS -----------------------------------------------------------
 
-    'chromium'              # Web browser
     'firefox'               # Web browser
     'filezilla'             # FTP Client
     'flashplugin'           # Flash
@@ -129,10 +126,10 @@ PKGS=(
     'mousepad'              # XFCE simple text editor
     'xpdf'                  # PDF viewer
 
-    # VIRTUALIZATION ------------------------------------------------------
+   # ICONS ----------------------------------------------------------------
 
-    'virtualbox'
-    'virtualbox-host-modules-arch'
+   'papirus-icon-theme'
+
 )
 
 for PKG in "${PKGS[@]}"; do

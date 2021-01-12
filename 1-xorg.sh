@@ -17,7 +17,7 @@ PKGS=(
         'xorg-xinit'            # XOrg init
         'xf86-video-intel'      # 2D/3D video driver
         'mesa'                  # Open source version of OpenGL
-        'xf86-input-libinput'   # Trackpad driver for Dell XPS
+        'xf86-input-libinput'   # Trackpad Driver
 )
 
 for PKG in "${PKGS[@]}"; do

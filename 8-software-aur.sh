@@ -13,7 +13,7 @@ echo
 
 cd "${HOME}"
 
-echo "CLOING: AURIC"
+echo "CLONING: AURIC"
 git clone "https://github.com/rickellis/AURIC.git"
 
 
@@ -26,14 +26,13 @@ PKGS=(
 
     # TERMINAL UTILITIES --------------------------------------------------
 
-    'hyper'                     # Terminal emulator built on Electron
+    'hyper'                     # Terminal emulator based on Electron
 
     # UTILITIES -----------------------------------------------------------
 
-    'dropbox'                   # Cloud file storage
-    'enpass-bin'                # Password manager
     'slimlock'                  # Screen locker
     'oomox'                     # Theme editor
+    'yay'                       # Other AUR Helper
 
     # DEVELOPMENT ---------------------------------------------------------
     
@@ -41,9 +40,8 @@ PKGS=(
 
     # MEDIA ---------------------------------------------------------------
 
-    'spotify'                   # Music player
     'screenkey'                 # Screencast your keypresses
-    # 'aftershotpro3'             # Photo editor
+    # 'aftershotpro3'           # Photo editor
 
     # POST PRODUCTION -----------------------------------------------------
 
@@ -51,7 +49,7 @@ PKGS=(
 
     # COMMUNICATIONS ------------------------------------------------------
 
-    'skypeforlinux-stable-bin'  # Skype
+    'google-chrome'  # Chrome
 
     # THEMES --------------------------------------------------------------
 

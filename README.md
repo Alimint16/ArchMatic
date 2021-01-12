@@ -1,14 +1,12 @@
 # Arch Linux Post Installation Setup and Config Scripts
-
-<img src="https://i.imgur.com/uFysgdN.png" />
-
+# These Scripts Were Originally Made By __[rickellis](https://github.com/rickellis/ArchMatic)__
 This README contains the steps I do to install and configure a fully-functional Arch Linux installation containing a desktop environment, all the support packages (network, bluetooth, audio, printers, etc.), along with all my preferred applications and utilities. The shell scripts in this repo allow the entire process to be automated.
 
-Setting up an Arch system from scratch is usually a time-intensive process. My goal in developing these scripts and my __[installation guide](https://github.com/rickellis/Arch-Linux-Install-Guide)__ was to be able to go from a blank hard drive to a fully functional Arch system with all my files, applications, and preferences set, as efficiently as possible.
+Setting up an Arch system from scratch is usually a time-intensive process. My goal in editing these scripts was to be able to go from a blank hard drive to a fully functional Arch system with all my files, applications, and preferences set, as efficiently as possible.
 
-Typically a complete install takes me between two and three hours. About and hour for the base install, and a couple hours for all the packages to download. In addition to the scripts in this repo I run a script that copies over my dotfiles, preferences, fonts, git repos, etc., so that when I log into a new system everything is exactly where I left off on my previous one. Almost everything. I run a Windows dev environment on VirtualBox which takes additional setup time, and I have to enable some cloud services so I can access my files.
+Typically a complete install takes me between four and five hours. About 2 hour for the base install, and a couple hours for all the packages to download.
 
-Note: Some of the package choices and tweaks are specific to the laptop I'm currently running, a Dell XPS 13...which kicks ass and runs Linux flawlessly.
+Note: Some of the package choices and tweaks are specific to the laptop I'm currently running, an Acer Aspire 5.
 
 So...
 
@@ -21,17 +19,13 @@ I run XFCE desktop because it's fast, clean, and lightweight. I've tried nearly 
 
 I don't install a greeter, preferring to always boot into the login shell by default. That way if there is ever a show-stopping problem with Xorg or XFCE I can fix it without having to boot from an external drive. To launch XFCE I enter `startx` in the terminal. If you run multiple desktops you can pass a path argument to `startx` pointing to the initialization file for the desktop you want to run.
 
-Since I don't use a greeter, to lock the screen I use Slimlock. I built a bunch of my own themes, and wrote a little shell script that randomizes the choice each time I lock the screen.
+Since I don't use a greeter, to lock the screen I use Slimlock.
 
 To boot I use `systemd` because it's minimalist, comes built-in, and since the Linux kernel has an EFI image, all we need is a way to execute it.
 
 I also install the LTS Kernel along side the rolling one, and configure my bootloader to offer both as a choice during startup. This enables me to switch kernels in the event of a problem with the rolling one.
 
-I don't run an application dock. The Whisker Menu (which I trigger via a shortcut) allows very fast lookup without needing a mouse. This is similar to Spotlight Search on Mac or the Start menu on Windows.
-
-I set up my machines as development environments since that's mostly what I do. To that end I install lots of dev tools and customize various things to increase productivity. For exmple, I set up Apache server to run as me, with the WebServer directory located in my home folder.
-
-I run my own utilites: __[WifiVPN](https://github.com/rickellis/WifiVPN)__ for network/VPN connectivity, __[AURIC](https://github.com/rickellis/AURIC)__ for AUR package management, and __[ConkyMatic](https://github.com/rickellis/ConkyMatic)__ to theme my Conky whenever I switch wallpaper.
+I run these utilites: __[WifiVPN](https://github.com/rickellis/WifiVPN)__ for network/VPN connectivity, __[AURIC](https://github.com/rickellis/auric)__ for AUR package management, and __[ConkyMatic](https://github.com/rickellis/ConkyMatic)__ to theme my Conky whenever I switch wallpaper.
 
 ---
 
@@ -39,7 +33,7 @@ The install steps are as follows:
 
 ### Install Arch Linux
 
-Follow the steps in my __[Arch Linux Installation Gude](https://github.com/rickellis/Arch-Linux-Install-Guide)__. Then:
+Follow the steps in this __[Arch Linux Installation Gude](https://github.com/rickellis/Arch-Linux-Install-Guide)__. Then:
 
 ---
 
@@ -57,9 +51,9 @@ Reflector allows the fastest Arch mirrors to be used.
 
     $   sudo pacman -S reflector rsync curl
 
-Now generate mirrorlist. Note: If you are not in the U.S. change "United States" to your own country.
+Now generate mirrorlist. Note: If you are not in Indonesia change "Indonesia" to your own country.
 
-    $   reflector --verbose --country 'United States' -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+    $   reflector --verbose --country 'Indonesia' -l 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 ---
 
@@ -76,7 +70,7 @@ So we can clone this repo...
 ### Clone ArchMatic
 Typically I just clone it into the home folder and delete it once I'm done.
 
-    $   git clone https://github.com/rickellis/ArchMatic.git
+    $   git clone https://github.com/Alimint16/ArchMatic.git
 
 ---
 

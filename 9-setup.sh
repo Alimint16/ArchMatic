@@ -52,10 +52,10 @@ sudo sed -i 's|initramfs-linux.img|initramfs-linux-lts.img|g' /boot/loader/entri
 # ------------------------------------------------------------------------
 
 echo
-echo "Configuring MAKEPKG to use all 8 cores"
+echo "Configuring MAKEPKG to use all 4 cores"
 
 sudo sed -i -e 's|[#]*MAKEFLAGS=.*|MAKEFLAGS="-j$(nproc)"|g' makepkg.conf
-sudo sed -i -e 's|[#]*COMPRESSXZ=.*|COMPRESSXZ=(xz -c -T 8 -z -)|g' makepkg.conf
+sudo sed -i -e 's|[#]*COMPRESSXZ=.*|COMPRESSXZ=(xz -c -T 4 -z -)|g' makepkg.conf
 
 # ------------------------------------------------------------------------
 
